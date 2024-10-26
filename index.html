@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crossing Wand - Make Your Candidate Visible</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto:wght@400&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #F2F2F2;
+            color: #001F3F;
+            scroll-behavior: smooth;
+        }
+
+        h1,
+        h2 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        h1 {
+            font-weight: 700;
+            color: #001F3F;
+            text-align: center;
+            padding-top: 2rem;
+        }
+
+        h2 {
+            font-weight: 600;
+            color: #007BFF;
+            margin-top: 1rem;
+        }
+
+        /* Header Section */
+        .header {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        /* CTA Button */
+        .cta-btn {
+            display: inline-block;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 1rem 2rem;
+            margin-top: 1rem;
+            font-weight: 600;
+            text-align: center;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: #001F3F;
+            color: #FFD700;
+            transform: scale(1.05);
+        }
+
+        /* Feature Section */
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 2rem auto;
+            max-width: 1200px;
+            padding: 1rem;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+
+        .feature-item {
+            flex: 1 1 45%;
+            padding: 1.5rem;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-item h2 {
+            color: #FF4500;
+        }
+
+        /* Simulation Section */
+        .simulation {
+            background-color: #FFD700;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .simulation-btn {
+            background-color: #001F3F;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .simulation-btn:hover {
+            background-color: #FF4500;
+            transform: scale(1.05);
+        }
+
+        /* Scroll-to-top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 0.8rem;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .scroll-top:hover {
+            background-color: #FF4500;
+        }
+
+        /* Fade-in Animation */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .features {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <section class="header">
+        <h1>Make Your Candidate Visible: Cross Busy Streets with Confidence!</h1>
+        <p>Start your 7-day free trial and get 2 customizable templates for your candidate’s graphics.</p>
+        <a href="#features" class="cta-btn">Start My Free Trial</a>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="feature-item">
+            <h2>Showcase While Crossing</h2>
+            <p>Display custom graphics using Crossing Wand and make every crossing a powerful statement of support!</p>
+        </div>
+        <div class="feature-item">
+            <h2>Attention-Grabbing Alerts</h2>
+            <p>Use whistling sounds and blinking screens to ensure your candidate stands out in the crowd.</p>
+        </div>
+        <div class="feature-item">
+            <h2>Customization Options</h2>
+            <p>Personalize graphics with favorite colors and designs, ensuring a unique and impactful message.</p>
+        </div>
+        <div class="feature-item">
+            <h2>Safe Crossing</h2>
+            <p>Our app keeps you visible while crossing busy streets, enhancing your safety and visibility.</p>
+        </div>
+    </section>
+
+    <!-- Simulation Section -->
+    <section class="simulation">
+        <h2>Try the Interactive Simulation</h2>
+        <p>See how easy it is to use the app and attract attention on the streets.</p>
+        <a href="#" class="simulation-btn">Try Simulation</a>
+    </section>
+
+    <!-- Scroll-to-top Button -->
+    <div class="scroll-top" id="scrollTop">↑</div>
+
+    <script>
+        // Show "Scroll to Top" Button on Scroll
+        const scrollTopBtn = document.getElementById('scrollTop');
+        window.onscroll = function () {
+            if (document.documentElement.scrollTop > 300) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        };
+
+        // Scroll to Top on Click
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+
+</html>
